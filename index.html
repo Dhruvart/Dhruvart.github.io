@@ -3,70 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dhrubajit Goswami – Graphic Designer</title>
+<title>Dhrubajit Goswami – Graphic Designer &amp; Video Editor</title>
+<meta name="description" content="Graphic designer and video editor: carousels, flyers, hoardings, packaging, reels, Meta ads and music.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--blue:#000;--hero-ink:#f4f3ff;--bg:#eceef4;--ink:#13151f;--muted:#565b6e;--line:#c9cddb;--card:#fff;--a:#ff5a36;--b:#ffd23f;--c:#19b394;
+:root{--blue:#000;--hero-ink:#f4f3ff;--bg:#eceef4;--ink:#13151f;--muted:#565b6e;--a:#ff5a36;--b:#ffd23f;--c:#19b394;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--blue:#000;--bg:#12141c;--ink:#eceef6;--muted:#9aa0b6;--line:#2c3040;--card:#1b1e2a}}
-:root[data-theme="dark"]{--blue:#000;--bg:#12141c;--ink:#eceef6;--muted:#9aa0b6;--line:#2c3040;--card:#1b1e2a}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141c;--ink:#eceef6;--muted:#9aa0b6}}
+:root[data-theme="dark"]{--bg:#12141c;--ink:#eceef6;--muted:#9aa0b6}
 *,*::before,*::after{box-sizing:inherit}
 html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Gilroy","Urbanist",system-ui,sans-serif}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--b);outline-offset:3px}
-.hero{background:var(--blue);color:var(--hero-ink);min-height:92vh;display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem clamp(1.25rem,4vw,3rem) 2rem}
+.hero{background:var(--blue);color:var(--hero-ink);min-height:92vh;display:flex;flex-direction:column;gap:2rem;padding:1.25rem clamp(1.25rem,4vw,3rem) 3rem}
 nav{display:flex;justify-content:space-between;gap:1rem;font-weight:500}
 nav a{text-decoration:none}nav a:hover{text-decoration:underline}
 nav div{display:flex;gap:1.5rem}
-h1{font-family:"ALTA","Bricolage Grotesque",sans-serif;font-size:clamp(3rem,14vw,12rem);line-height:.86;letter-spacing:-.04em;margin:0;font-weight:500;font-variation-settings:"opsz" 96}
+.hero-main{flex:1;display:grid;grid-template-columns:1.5fr 1fr;gap:clamp(1.5rem,4vw,4rem);align-items:end}
+h1{font-family:"ALTA","Bricolage Grotesque",sans-serif;font-size:clamp(3rem,8vw,8rem);line-height:.86;letter-spacing:-.04em;margin:0;font-weight:500;font-variation-settings:"opsz" 96}
 h1 span{display:inline-block;font-weight:var(--w,300);transition:font-weight .15s}
 h1 .l2{display:block}
-.hero p{max-width:34ch;font-size:1.25rem;margin:1.5rem 0 0}
+.role{font:600 clamp(1.3rem,2.6vw,2rem)/1.2 "ALTA","Bricolage Grotesque",sans-serif;margin:1.5rem 0 0;color:var(--b)}
+.hero p.lead{max-width:36ch;font-size:1.2rem;margin:.75rem 0 0}
+.photo{position:relative;justify-self:end;width:100%;max-width:430px;aspect-ratio:4/5;margin:0 14px 14px 0}
+.photo::before{content:"";position:absolute;inset:14px -14px -14px 14px;background:var(--a);border-radius:4px}
+.photo .frame{position:relative;width:100%;height:100%;border-radius:4px;overflow:hidden;background:#1d1f2b;display:grid;place-items:center}
+.photo .frame b{font:600 6rem "ALTA","Bricolage Grotesque",sans-serif;color:#3a3d50}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 h2,h3{font-family:"ALTA","Bricolage Grotesque",sans-serif;letter-spacing:-.02em;line-height:1.05;margin:0}
 section{padding:clamp(3rem,8vw,6rem) clamp(1.25rem,4vw,3rem)}
 h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600}
 .filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem}
 .filters button{font:inherit;font-weight:500;background:none;color:var(--ink);border:2px solid var(--ink);border-radius:99px;padding:.35rem 1rem;cursor:pointer}
 .filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:1.5rem}
 .card{margin:0}
 .card[hidden]{display:none}
 .art{aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:4px}
 .art i{position:absolute;display:block}
+.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .card figcaption{display:flex;justify-content:space-between;gap:1rem;padding-top:.75rem}
 .card h3{font-size:1.35rem;font-weight:600}
 .card small{color:var(--muted);font-size:.95rem;text-align:right}
-/* poster art */
 .p1{background:var(--a)}.p1 i:nth-child(1){width:70%;aspect-ratio:1;border-radius:50%;background:var(--b);left:-15%;bottom:-10%}
 .p1 i:nth-child(2){width:45%;height:45%;background:#13151f;right:10%;top:10%;border-radius:0 100% 0 0}
 .p2{background:#13151f}.p2 i{left:12%;right:12%;height:9%;background:var(--c)}
 .p2 i:nth-child(1){top:14%}.p2 i:nth-child(2){top:30%;left:30%}.p2 i:nth-child(3){top:46%;right:35%;background:var(--b)}.p2 i:nth-child(4){top:62%;background:var(--a)}
 .p3{background:var(--b)}.p3 i:nth-child(1){inset:15%;border:14px solid #13151f;border-radius:50%}
-.p3 i:nth-child(2){width:30%;aspect-ratio:1;background:var(--blue);left:35%;top:35%;transform:rotate(45deg)}
+.p3 i:nth-child(2){width:30%;aspect-ratio:1;background:#000;left:35%;top:35%;transform:rotate(45deg)}
 .p4{background:var(--c)}.p4 i:nth-child(1){left:10%;top:10%;width:80%;height:50%;background:var(--bg);border-radius:200px 200px 0 0}
 .p4 i:nth-child(2){left:10%;bottom:10%;width:38%;height:22%;background:#13151f}.p4 i:nth-child(3){right:10%;bottom:10%;width:38%;height:22%;background:var(--a)}
-.p5{background:var(--blue)}.p5 i{border-radius:50%;border:10px solid var(--hero-ink);aspect-ratio:1}
+.p5{background:#000}.p5 i{border-radius:50%;border:10px solid var(--hero-ink);aspect-ratio:1}
 .p5 i:nth-child(1){width:60%;left:-10%;top:10%}.p5 i:nth-child(2){width:60%;right:-10%;top:30%;border-color:var(--b)}.p5 i:nth-child(3){width:60%;left:20%;bottom:-20%;border-color:var(--a)}
 .p6{background:#f4f3ff}.p6 i:nth-child(1){left:0;top:0;width:50%;height:100%;background:var(--a)}
 .p6 i:nth-child(2){left:25%;top:25%;width:50%;aspect-ratio:1;background:#13151f;border-radius:50%;mix-blend-mode:multiply}
+.p7{background:#13151f}.p7 i{bottom:15%;width:10%;background:var(--b);border-radius:99px}
+.p7 i:nth-child(1){left:10%;height:30%}.p7 i:nth-child(2){left:26%;height:55%;background:var(--a)}.p7 i:nth-child(3){left:42%;height:70%}.p7 i:nth-child(4){left:58%;height:45%;background:var(--c)}.p7 i:nth-child(5){left:74%;height:25%}
 .about{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:3rem;border-top:2px solid var(--ink);margin:0 clamp(1.25rem,4vw,3rem);padding-left:0;padding-right:0}
 .about p{max-width:60ch;margin:1rem 0 0}
 .about ul{list-style:none;padding:0;margin:1rem 0 0;font:600 1.5rem/1.5 "ALTA","Bricolage Grotesque",sans-serif}
 .contact{background:var(--ink);color:var(--bg)}
 .contact a{display:inline-block;font:600 clamp(1.6rem,6vw,4.5rem)/1.1 "ALTA","Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin-top:1rem;text-decoration-thickness:4px;text-underline-offset:.12em;overflow-wrap:anywhere}
 .contact p{margin:1.5rem 0 0;opacity:.8}
+@media (max-width:760px){.hero-main{grid-template-columns:1fr;align-items:start}.photo{justify-self:start;max-width:340px}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}h1 span{transition:none}}
 </style>
 </head>
 <body>
 <header class="hero">
   <nav><strong>Dhrubajit Goswami</strong><div><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
-  <div>
-    <h1 id="name" aria-label="Dhrubajit Goswami"><span class="l1">Dhrubajit</span><span class="l2">Goswami</span></h1>
-    <p>Graphic designer making identities, posters and packaging for people with something to say.</p>
+  <div class="hero-main">
+    <div>
+      <h1 id="name" aria-label="Dhrubajit Goswami"><span class="l1">Dhrubajit</span><span class="l2">Goswami</span></h1>
+      <p class="role">Graphic designer &amp; video editor</p>
+      <p class="lead">Carousels, flyers, hoardings, packaging, reels, Meta ads and music.</p>
+    </div>
+    <div class="photo">
+      <div class="frame"><b>DG</b><img src="photo.jpg" alt="Portrait of Dhrubajit Goswami" onerror="this.remove()"></div>
+    </div>
   </div>
 </header>
 
@@ -74,35 +91,40 @@ h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600}
   <h2>Selected work</h2>
   <div class="filters" role="group" aria-label="Filter projects">
     <button aria-pressed="true" data-f="all">All</button>
-    <button aria-pressed="false" data-f="identity">Identity</button>
-    <button aria-pressed="false" data-f="poster">Poster</button>
+    <button aria-pressed="false" data-f="carousel">Carousel</button>
+    <button aria-pressed="false" data-f="flyer">Flyer</button>
+    <button aria-pressed="false" data-f="hoardings">Hoardings</button>
     <button aria-pressed="false" data-f="packaging">Packaging</button>
+    <button aria-pressed="false" data-f="reels">Reels</button>
+    <button aria-pressed="false" data-f="meta">Meta Ads</button>
+    <button aria-pressed="false" data-f="music">Music</button>
   </div>
   <div class="grid">
-    <figure class="card" data-c="identity"><div class="art p1"><i></i><i></i></div><figcaption><h3>Sunday Bakery</h3><small>Identity, 2026</small></figcaption></figure>
-    <figure class="card" data-c="poster"><div class="art p2"><i></i><i></i><i></i><i></i></div><figcaption><h3>Low Light Festival</h3><small>Poster, 2026</small></figcaption></figure>
-    <figure class="card" data-c="packaging"><div class="art p3"><i></i><i></i></div><figcaption><h3>Halo Tea</h3><small>Packaging, 2025</small></figcaption></figure>
-    <figure class="card" data-c="identity"><div class="art p4"><i></i><i></i><i></i></div><figcaption><h3>Arch Architects</h3><small>Identity, 2025</small></figcaption></figure>
-    <figure class="card" data-c="poster"><div class="art p5"><i></i><i></i><i></i></div><figcaption><h3>Tidal Film Series</h3><small>Poster, 2025</small></figcaption></figure>
-    <figure class="card" data-c="packaging"><div class="art p6"><i></i><i></i></div><figcaption><h3>Half &amp; Half Oats</h3><small>Packaging, 2024</small></figcaption></figure>
+    <figure class="card" data-c="carousel"><div class="art p4"><i></i><i></i><i></i><img src="work/carousel.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Carousel</h3><small>Carousel</small></figcaption></figure>
+    <figure class="card" data-c="flyer"><div class="art p1"><i></i><i></i><img src="work/flyer.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Flyer</h3><small>Flyer</small></figcaption></figure>
+    <figure class="card" data-c="hoardings"><div class="art p2"><i></i><i></i><i></i><i></i><img src="work/hoarding.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Hoarding</h3><small>Hoardings</small></figcaption></figure>
+    <figure class="card" data-c="packaging"><div class="art p3"><i></i><i></i><img src="work/packaging.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Packaging</h3><small>Packaging</small></figcaption></figure>
+    <figure class="card" data-c="reels"><div class="art p5"><i></i><i></i><i></i><img src="work/reel.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Reel</h3><small>Reels</small></figcaption></figure>
+    <figure class="card" data-c="meta"><div class="art p6"><i></i><i></i><img src="work/meta-ad.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Meta ad</h3><small>Meta Ads</small></figcaption></figure>
+    <figure class="card" data-c="music"><div class="art p7"><i></i><i></i><i></i><i></i><i></i><img src="work/music.jpg" alt="" onerror="this.remove()"></div><figcaption><h3>Music</h3><small>Music</small></figcaption></figure>
   </div>
 </section>
 
 <section class="about" id="about">
   <div>
     <h2>About</h2>
-    <p>I’m a designer with eight years of experience working with small studios, cultural venues and food brands. I start with a question, sketch on paper, and keep the final system simple enough for a team to use without me.</p>
+    <p>I’m a graphic designer and video editor. I design carousels, flyers, hoardings, packaging and Meta ads, and I edit reels and music projects. I like clear ideas, strong type and work that is ready to publish.</p>
   </div>
   <div>
     <h2>Services</h2>
-    <ul><li>Brand identity</li><li>Print and posters</li><li>Packaging</li><li>Art direction</li></ul>
+    <ul><li>Graphic design</li><li>Video editing</li><li>Social media content</li><li>Print and packaging</li></ul>
   </div>
 </section>
 
 <section class="contact" id="contact">
   <h2>Have a project?</h2>
   <a href="mailto:saraighat2023@gmail.com">saraighat2023@gmail.com</a>
-  <p>Booking new projects from January 2027.</p>
+  <p>Open for new projects.</p>
 </section>
 
 <script>
@@ -113,9 +135,10 @@ h2{font-size:clamp(2.2rem,5vw,3.6rem);font-weight:600}
     t.split('').forEach(function(ch){var e=document.createElement('span');e.textContent=ch;e.setAttribute('aria-hidden','true');s.appendChild(e);sp.push(e);});
   });
   function move(x){sp.forEach(function(e){var r=e.getBoundingClientRect(),d=Math.abs(x-(r.left+r.width/2));e.style.setProperty('--w',Math.round(Math.max(300,800-d*1.6)));});}
+  var hero=document.querySelector('.hero');
   if(!matchMedia('(prefers-reduced-motion:reduce)').matches){
-    document.querySelector('.hero').addEventListener('pointermove',function(e){move(e.clientX);});
-    document.querySelector('.hero').addEventListener('pointerleave',function(){sp.forEach(function(e){e.style.setProperty('--w',300);});});
+    hero.addEventListener('pointermove',function(e){move(e.clientX);});
+    hero.addEventListener('pointerleave',function(){sp.forEach(function(e){e.style.setProperty('--w',300);});});
   }
   sp.forEach(function(e){e.style.setProperty('--w',300);});
   var btns=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.card');
